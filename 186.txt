@@ -1,0 +1,34 @@
+# Zholobova_lab_rab_1
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> лаб раб 1 </title> <!имя страницы>
+</head>
+<body>
+<form name="forma1">
+ЗАДАНИЕ 186 <br /><br />
+
+Введите последовательности a1, ... ,an <input type="text" name="a" size="10" /><br /><br />
+! Внимание числа вводятся через пробел !<br /><br />
+<input type="button" value="вычислить" onclick="ar()" /><br /><br />
+ответ<input type="text" name="res" size="20" value="" /> <br /><br />
+</form>
+<script>
+function ar ()
+{
+var f=1; 
+arr = document.forma1.a.value.split(' ');
+var otvet=1;
+for(var i=0;i<arr.length;i++)
+{
+f=(i+1)*f;
+if(arr[i]>i+1 && arr[i]<f)
+{
+otvet=1/(parseFloat(otvet)*arr[i]);
+}
+} 
+document.forma1.res.value = otvet;
+}
+</script>
+</body>
+</html>
